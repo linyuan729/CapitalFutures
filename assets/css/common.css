@@ -1,0 +1,1245 @@
+/*@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');*/
+* {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+}
+html, body {
+	height: auto;
+	margin: 0;
+}
+body{
+	font-family: "Lato", "Noto Sans TC", "微軟正黑體", Microsoft JhengHei, Apple LiGothic Medium, Arial, helvetica, sans-serif;
+	color: #333;
+	background: #002040;
+	color: #fff;
+	font-size: 1.2em;
+	}
+input, button, select, textarea {
+	font-family: "Lato", "Noto Sans TC", "微軟正黑體", Microsoft JhengHei, Apple LiGothic Medium, Arial, helvetica, sans-serif;
+	outline: none;
+	/*-webkit-appearance: none;	 Safari 和 Chrome，移除iOS內建樣式 */
+	/*-moz-appearance: none;		 FireFox */
+	/*appearance: none;*/
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	}
+
+a:link {
+	text-decoration: none;
+	color: #333;
+}
+a:visited {
+	color: #333;
+}
+img {
+	width: 100%;
+	border: 0;
+}
+.floatleft {
+	float: left;
+}
+.clearfix {
+	clear: both;
+}
+
+h1, h2 ,h3, h4,h5, h6  {
+	margin: 0;
+}
+
+.maximg {
+	max-width: 100%;
+	width: auto;
+	vertical-align: middle;
+}
+
+
+/********************  header/footer ********************/
+.header {
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	background: #fff;
+	border-top: 5px solid #b60033;
+}
+.header img {
+	max-width: 100%;
+	width: auto;
+	padding: 10px 15px;
+}
+.logo {
+	float: left;
+}
+.logo-right {
+	float: right;
+}
+.footer p {
+	max-width: 980px;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	font-size: 0.9em;
+}
+.logo-bottom  {
+	background: #b60033;
+	clear: both;
+	overflow: hidden;
+}
+.logo-bottom img {
+	float: right;
+	max-width: 100%;
+	width: auto;
+}
+.footnote {
+	max-width: 980px;
+	margin: auto;
+	padding: 0 10px 0 20px;
+	background: #002040;
+}
+.footnote h4 {
+	margin: 5px 0;
+}
+.footnote ol {
+	margin: 5px 0;
+	padding: 10px;
+	font-size: 0.9em;
+}
+/********************  btn ********************/
+.icon-btn{
+	padding: 20px;
+	font-size: 2em;
+}
+.btn-bars, .btn-remove{
+	display: none;
+	position: absolute;
+	right: 0;
+	color: #ffd755;
+}
+.btn-bars img{
+	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1));
+}
+.btn-remove {
+	color: #000;
+	z-index: 3;
+}
+.btn {
+	display: inline-block;
+	margin: 5px;
+	padding: 5px 15px;
+	border-radius: 5px;
+	background: #ffd755;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+}
+.btn.fbview {
+	width: 200px;
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+.btn.fbview img {
+	max-width: 100%;
+	width: auto;
+}
+.btn.signbtn {
+	width: 200px;
+	position: absolute;
+	top: 47%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+/********************  nav ********************/
+.nav {
+	position: relative;
+	z-index: 1;
+}
+.menu{
+	position: absolute;
+	width: 100%;
+	background: #00082b;
+}
+.menu ul{
+	width: 800px;
+	margin: auto;
+	padding: 0 10px;
+}
+.menu ul li{
+	position: relative;
+	display: inline-block;
+	margin-right: -4px;
+	list-style: none;
+	text-align: center;
+}
+.menu ul li a{
+	display: inline-block;
+}
+.overlay-nav {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+ul.submenu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	background: #00082b;
+	border: 1px solid #50c8ff;
+}
+.menu ul li .submenu li {
+	min-width: 136px;
+	margin-right: 0;
+	border-top: 1px solid #50c8ff;
+}
+.menu ul li .submenu li:first-child {
+	border-top: 0;
+}
+.submenu a {
+	width: 100%;
+	padding: 10px 20px;
+	color: #fff;
+	font-weight: bold;
+}
+.submenu a:hover {
+	color: #ffd755;
+}
+/*.menu ul li:hover .submenu {
+	display: block;
+}*/
+/********************  gotop ********************/
+.gotop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: #00082b;
+	color: #ccc;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 1.8em;
+	font-weight: bold;
+	cursor: pointer;
+}
+.nav.navfixed {
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	/*background: rgba(240, 240, 240, 0.9);*/
+}
+/********************  kv ********************/
+.kv {
+	position: relative;
+}
+.kv_w {
+	width: 38%;
+	position: absolute;
+	top: 17%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.img01 {
+	width: 45%;
+	position: absolute;
+	bottom: 4%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.youtube {
+	width: 30%;
+	position: absolute;
+	bottom: 9%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+/* 跑馬 */
+.message {
+	width: 650px;
+	position: absolute;
+	bottom: 52%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* youtube rwd */
+.embed-container {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/********************  main ********************/
+.main {
+	position: relative;
+	max-width: 980px;
+	margin: auto;
+	padding: 20px;
+}
+.main .group {
+	padding: 20px 0;
+}
+.main .title {
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+.main .title h2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	color: #00ffff;
+}
+.main .content {
+	overflow: hidden;
+	width: 100%;
+	padding: 0 45px;
+	background: #002864 \9;
+}
+/********************  main p1 ********************/
+.main.p1 .title h2 {
+	top: 30px;
+	color: #ffd755;
+}
+.main.p1 .content  h3 {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 5px;
+	background: #ffd755;
+	color: #000;
+}
+.main.p1 .img02 img {
+	max-width: 100%;
+	width: auto;
+}
+.mt table {
+	margin: 10px auto;
+	border-collapse: collapse;
+}
+.mt th {
+	padding: 10px;
+	background: #ffd755;
+	color: #000;
+	border: 1px solid #ffd755;
+}
+.mt tr.even {
+	background: transparent;
+	background: rgba(255,255,255,0.1);
+}
+.mt td {
+	padding: 10px 15px;
+	border: 1px solid #ffd755;
+}
+.mt.s2 td:first-child {
+	width: 100px;
+}
+_:-ms-fullscreen, .mt.s2 td.ts2 {
+	width: 600px;
+}
+.mt.s2 td.ts1 {
+	width: 100px;
+}
+.mt.s3 table {
+	display: inline-block;
+	margin: 10px 5px;
+	width: 48%;
+	text-align: center;
+}
+.mt.s3 td {
+	height: 52px;
+}
+.mt.s3 .ts1 {
+	width: 30%;
+}
+.mt.s3 .ts2 {
+	width: 50%;
+}
+.mt.s3 .ts3 {
+	width: 20%;
+}
+
+.mt.s4 {
+	text-align: center;
+	min-height: 250px;
+	background: url(../images/ajax-loader.svg) no-repeat 50% 200px;
+}
+.mt.s4 table {
+	display: inline-block;
+	margin: 30px 5px;
+	background: #002864;
+}
+.mt.s4 td .ts1 {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	margin: 0;
+	padding: 0px 5px;
+	cursor: pointer;
+}
+.img03 {
+	width: 45%;
+	margin: 10px;
+}
+.img03-full {
+	max-width: 95%;
+	width: auto;
+	margin: 10px;
+}
+.qa h4 {
+	margin-top: 30px;
+	font-size: 1.2em;
+	border-bottom: 1px solid #fff;
+}
+.qa p {
+	padding-left: 2em;
+	text-indent: -2em;
+	color: #c3dcff;
+}
+.qa ul {
+	margin: 0;
+	padding-left: 1.5em;
+	color: #c3dcff;
+}
+.qa ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.qa a {
+	color: #fff;
+}
+.qa a:hover {
+	color: #ffd755;
+}
+
+/********************  main p2 ********************/
+.main.p2 .content {
+	padding: 0 80px;
+	background: url("../images/signup03.png") repeat-y 0 0;
+	background-size: 100%;
+}
+.main.p2 .content .title {
+	margin-bottom: 40px;
+}
+.main.p2 .content h3 {
+	padding: 20px 0;
+	border-bottom: 2px solid #fff;
+}
+.main.p2 .content .tline {
+	position: absolute;
+	top: 78px;
+	left: 0;
+	right: 0;
+	margin: -8px auto;
+	width: 40px;
+	height: 12px;
+	background: #002864;
+}
+/*
+_:-ms-fullscreen, .main.p2 .content .tline {
+	top: 67px;
+}*/
+.main.p2 .content .tline::before {
+	position: absolute;
+	left: -2px;
+	top: 6px;
+	content: "";
+	transform: rotate(30deg);
+	width: 24px;
+	height: 2px;
+	background: #fff;
+}
+.main.p2 .content .tline::after {
+	position: absolute;
+	right: -2px;
+	top: 6px;
+	content: "";
+	transform: rotate(-30deg);
+	width: 24px;
+	height: 2px;
+	background: #fff;
+}
+/********************  main p4 ********************/
+.main.p4 {
+	max-width: none;
+}
+.main.p4 .mt th {
+	padding: 5px;
+}
+.main.p4 .mt td {
+	padding: 5px;
+}
+.pagination {
+	margin: auto;
+	text-align: center;
+}
+.pagination a {
+	color: #fff;
+	padding: 4px 10px;
+	text-decoration: none;
+	transition: background-color .3s;
+	display: none;
+}
+
+.pagination a.active {
+	background-color: #00ffff;
+	color: #000;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #fff;
+	color: #000;
+}
+.RankingBox0,.RankingBox1,.RankingBox2,.RankingBox3,.RankingBox4 {
+	display: none;
+}
+.RankingBox0.active {
+	display: block;
+}
+/********************  報名 ********************/
+.precaution {
+	overflow: auto;
+	height: 300px;
+	padding: 20px 30px;
+	margin: 20px 0;
+	background: #fff;
+	color: #000;
+	border: solid 1px black;
+}
+.signup {
+	width: 550px;
+	margin: auto;
+}
+.signup input[type=checkbox] {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	vertical-align: top;
+}
+.signup label {
+	vertical-align: super;
+	cursor: pointer;
+}
+.signup input[type=radio] {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	vertical-align: top;
+}
+.signup span.color1 {
+	color: #ffd755;
+}
+.signup .btn {
+	margin: 5px 0;
+	text-align: center;
+}
+.signup .contentimg img {
+	max-width: 100%;
+	width: auto;
+}
+/********************  修改資料 ********************/
+.avatar-m img {
+	width: 21%;
+	margin: 5px;
+}
+.info input[type=text], .info select {
+	width: 255px;
+}
+.info textarea {
+	width: 255px;
+	height: 150px;
+	overflow-y: scroll;
+}
+/********************  cv ********************/
+.card {
+	overflow: hidden;
+	clear: both;
+	max-width: 980px;
+	margin: auto;
+}
+.card-center {
+	text-align: center
+}
+.card ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.color1 {
+	color: #ffd755;
+}
+.avatar {
+	float: left;
+	width: 32%;
+	margin: auto;
+	margin-right: 5%;
+	margin-bottom: 20px;
+}
+.avatar-c {
+	width: 140px;
+	margin: auto;
+}
+.avatar-c .btn {
+	background: #fff;
+}
+ul.info {
+	float: left;
+	width: 62%;
+}
+.info li, .tab ul li .info li {
+	padding: 5px;
+	list-style: none;
+}
+.info li h3 {
+	font-size: 1.5em;
+}
+.info li label {
+	display: inline-block;
+	width: 120px;
+	margin-right: 10px;
+	vertical-align: top;
+	color: #ffd755;
+}
+.info li label i {
+	margin-right: 5px;
+}
+.info li label img {
+	width: 20px;
+	margin-right: 5px;
+}
+.note li {
+	padding: 0;
+	list-style: disc;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+	z-index: 2;
+}
+.lightbox {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 650px;
+	margin: auto;
+	padding: 10px 20px;
+	background: #fff;
+	color: #000;
+	border-radius: 5px;
+	overflow: auto;
+	z-index: 3;
+}
+.lightbox .closebtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	background: #00082b;
+	cursor: pointer;
+}
+.lightbox.finish {
+	height: 120px;
+}
+.lightbox.profile {
+	position: fixed;
+	width: 780px;
+	height: 360px;
+}
+.lightbox.profile ul {
+	padding: 0;
+	margin: 0;
+}
+.tab .profile ul li {
+	padding: 15px 0;
+	margin: 0;
+	list-style: none;
+	border-top: 1px solid #aaa;
+	text-align: center;
+}
+.tab .profile ul li:first-child {
+	border-top: 0;
+}
+.tab .profile ul li h4 {
+	margin: 10px 0;
+	font-size: 1.2em;
+}
+.profile span {
+	display: inline-block;
+	min-width: 80px;
+	font-size: 2em;
+	color: #002864;
+	font-weight: bold;
+	text-align: center;
+}
+.lightbox.userinfo {
+	position: relative;
+	width: 100%;
+	padding: 1%;
+}
+.lightbox.sharefb {
+	position: fixed;
+	width: 741px;
+	height: 500px;
+}
+.lightbox.powerinfo {
+	position: fixed;
+	height: 300px;
+	padding: 30px;
+	background: #002864;
+}
+/********************  領獎資料 ********************/
+.login-box {
+	font-family: "Lato", "Noto Sans TC", "微軟正黑體", Microsoft JhengHei, Apple LiGothic Medium, Arial, helvetica, sans-serif;
+}
+.userdata.login-box section {
+	border: solid 3px #003612;
+}
+.userdata.login-box .dload {
+	background-color: white;
+	height: 100%;
+	text-align: center;
+	
+	/*display: none;*/
+	color: #000;
+	height: auto;
+	padding: 5px 0;
+}
+.userdata.login-box section img {
+	width: 100%;
+}
+.userdata.login-box .dload ul {
+	width: 80%;
+	margin: 0 auto;
+}
+.userdata.login-box .dload ul li {
+	border-bottom: solid 1px black;
+	margin: 1em 0;
+	text-align: left;
+	white-space: nowrap;
+	color: #000;
+	
+	background: #fff;
+}
+.dload p {
+	color: white;
+	background: #a0a0a0;
+	padding: 0.4em 0;
+}
+.dload button {
+	cursor: pointer;
+	background: #ffd755;
+	color: #000;
+	padding: 0.5em 2em;
+	margin: 0 1em;
+	margin: 5px ;
+}
+.dload h3 {
+	padding: 10px;
+}
+.dload ol {
+	margin: 10px 0;
+	padding: 0 20px 0 40px;
+}
+.dload ol li {
+	list-style: disc;
+	text-align: left;
+}
+.userdata.login-box.prize_c {
+	position: relative;
+	height: auto;
+}
+.userdata.login-box.prize_c:before {
+	height: auto;
+}
+.userdata.login-box.prize_c section {
+	box-shadow: none;
+	background-color: #fff;
+	border: none;
+}
+/********************  tab ********************/
+.tab {
+	width: 90%;
+	margin: 40px auto;
+}
+.tab ul, .tab ul li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.tab ul.thumb li {
+	display: inline-block;
+	width: 32%;
+	padding: 10px;
+	margin-right: -4px;
+	cursor: pointer;
+	transition: 0.4s;
+	text-align: center;
+	border: 1px solid #002864;
+}
+.tab ul.thumb li.active {
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #ffd755;
+	color: #ffd755;
+}
+.tab ul.panel {
+	width: 100%;
+}
+.tab ul.panel li.panel_c {
+	display: none;
+	transition: 0.4s;
+}
+.tab ul.panel li.active.panel_c {
+	display: block;
+}
+/********************  成績 ********************/
+.grade .gradelist {
+	overflow-x: hidden;
+    overflow-y: auto;
+	height: 420px;
+}
+.grade table {
+	width: 100%;
+	margin: auto;
+	background: #e6f5ff;
+	color: #000;
+	border-collapse: collapse;
+}
+.grade th {
+	padding: 10px;
+	background: #002887;
+	color: #fff;
+	text-align: center;
+}
+.grade tr.even, .grade tr:nth-child(even) {
+	background: #fff;
+}
+.grade td {
+	padding: 10px 15px;
+	border: 1px solid #002887;
+}
+.grade td.ts1 {
+	width: 5%;
+	text-align: center;
+}
+.grade td.tsp1-1 {
+	width: 66.66%;
+	text-align: center;
+}
+.grade td.tsp1-2 {
+	width: 33.33%;
+	text-align: center;
+}
+.grade td.tsp2-1 {
+	width: 22%;
+	text-align: center;
+}
+.grade td.tsp2-2 {
+	width: 56%;
+}
+.grade td.color1 {
+	color: #ec2424;
+	font-weight: bold;
+}
+.grade td.color2 {
+	color: #009b0f;
+	font-weight: bold;
+}
+/********************  贈獎 ********************/
+.prize {
+	width: 90%;
+	margin: 40px auto;
+}
+.prize ul {
+	padding: 0;
+	margin: 0;
+}
+.prize ul li.th {
+	background: #002887;
+	color: #fff;
+	text-align: center;
+}
+.prize ul li {
+	clear: both;
+	overflow: hidden;
+	padding: 0;
+	border-bottom: 1px solid #002887;
+	list-style: none;
+	background: #e6f5ff;
+	color: #000;
+	text-align: center;
+}
+.prize ul li.even {
+	background: #fff;
+}
+.prize .t2 {
+	margin: 10px 0;
+}
+.prize .t2 span {
+	display: inline-block;
+	padding: 2px 5px;
+	margin-right: -5px;
+	border: 1px solid #fff;
+}
+.tbox {
+	float: left;
+	width: 30%;
+	margin: 10px;
+}
+.prize .t3 {
+	float: left;
+	width: 64%;
+	margin: 5px;
+}
+.prize .t3 p {
+	margin: 0;
+}
+.prize .t3 span.frame {
+	display: inline-block;
+	min-width: 140px;
+	margin: 5px 2px;
+	padding: 5px;
+	border: 1px solid #002887;
+	border-radius: 5px;
+}
+
+.ability01 {
+	float: left;
+	margin: 0 60px;
+}
+.ability01 li label {
+	display: inline-block;
+	width: 120px;
+	margin-right: 10px;
+}
+.ability01 li span {
+	font-size: 1.4em;
+}
+.ability02 {
+	float: right;
+	width:250px;
+	height:250px;
+	margin: 0 60px;
+}
+.popupbox {
+	width: 300px;
+	height: 220px;
+	margin: auto;
+}
+
+.ability03 {
+	text-align: center;
+	font-size: 1.5em;
+}
+.ability03 span {
+	color: #ffd755;
+	font-weight: bold;
+}
+
+#btn002, #btn010,#btn014{
+	display: none;
+}
+
+.remind {
+	display: none;
+}
+
+.indexinfo {
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+.indexinfo h3 {
+	padding: 10px;
+	border-bottom: #fff 1px solid;
+}
+.indexinfo a {
+	color: #ffd755;
+}
+
+/********************  1366px ********************/
+@media only screen and (max-width: 1366px) {
+
+}
+/********************  1024px ********************/
+@media only screen and (max-width: 1024px) {
+
+}
+/********************  768px ********************/
+@media only screen and (max-width: 768px) {
+.header img {
+	height: 55px;
+}
+.footer p {
+	font-size: 0.8em;
+}
+.pcblock {
+	display: none;
+}
+.btn-bars, .btn-remove{
+	display: block;
+}
+.btn{
+	font-size: 1.2em;
+}
+.nav {
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	padding-top: 0;
+}
+.menu{
+	display: none;
+	top: 0;
+}
+.menu ul{
+	width: 100%;
+	margin: 30px 0;
+}
+.menu ul li {
+	display: block;
+}
+.menu ul li a {
+	overflow: hidden;
+}
+.menu ul li a img {
+	width: 103%;
+}
+.menu.active, .overlay-nav.active {
+	display: block;
+}
+ul.submenu {
+	position: relative;
+	height: auto;
+	margin: 0;
+}
+.submenu li {
+	border-left: 0;
+	border-top: 1px solid #50c8ff;
+}
+.submenu li:first-child {
+	border-top: 0;
+}
+.submenu.s1, .submenu.s3, .submenu.s4 {
+	width: 100%;
+	left: 0;
+}
+.submenu a {
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.kv {
+	height: 900px;
+}
+.kv_w {
+	width: 80%;
+	top: 22%;
+}
+.img01 {
+	width: 95%;
+	bottom: 0;
+}
+.youtube {
+	width: 85%;
+	bottom: 0;
+}
+.message {
+	width: 90%;
+	bottom: 50%;
+}
+
+.precaution {
+	padding: 5px 10px;
+}
+.signup {
+	width: 100%;
+}
+.avatar {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.avatar-l {
+	width: 160px;
+	margin: auto;
+}
+ul.info {
+	float: none;
+	width: 100%;
+}
+.info li h3 {
+	text-align: center;
+}
+
+.tab {
+	width: 100%;
+}
+.tab ul.panel {
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.prize .t3 p span {
+	min-width: 165px;
+}
+
+.lightbox {
+	width: 90%;
+}
+.lightbox.profile {
+	width: 90%;
+	height: 450px;
+	text-align: center;
+}
+.img03 {
+	width: 90%;
+}
+.lightbox.sharefb {
+	width: 95%;
+	height: 440px;
+}
+.mt.s3 table {
+	width: 98%;
+}
+}
+
+/********************  480px ********************/
+@media only screen and (max-width: 480px) {
+.kv {
+	height: 680px;
+}
+.kv_w {
+	width: 80%;
+	top: 22%;
+}
+.img01 {
+	bottom: 5%;
+}
+.youtube {
+	bottom: 10%;
+}
+.message {
+	bottom: 55%;
+}
+
+.main .title {
+	margin-bottom: 20px;
+}
+.main .title h2 {
+	width: 65%;
+	background: #002864;
+	top: 0;
+}
+.main.p1 .title h2 {
+	top: 0;
+}
+.main.p1 .content {
+	padding: 0;
+}
+.main.p2 .content {
+	padding: 0;
+	background: #002864;
+}
+.main.p2 .content .tline {
+	margin: -8px auto;
+}
+.main.p4 .content {
+	padding: 0;
+}
+
+.tab ul.thumb li {
+	margin-right: 0; 
+}
+.prize .t3 {
+	float: none;
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+}
+.tbox {
+	float: none;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+ul.ability01 {
+	float: none;
+	max-width: 250px;
+	margin: 20px auto;
+}
+.ability02 {
+	float: none;
+	max-width: 320px;
+	margin: 20px auto;
+}
+.userdata.login-box.prize_c section {
+	width: 100%;
+	height: auto;
+}
+/********************  修改資料 ********************/
+.info input[type=text], .info select, .info textarea {
+	width: 100%;
+}
+}
+/********************  320px ********************/
+@media only screen and (max-width: 320px) {
+.avatar-m img {
+	width: 20%;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
